@@ -1,0 +1,11 @@
+vendor/
+.keep
+*.sqlite3
+log/
+tmp/
+public/*.html
+public/*.txt
+~*
+
+# Ignore application configuration
+/config/application.yml

@@ -1,0 +1,32 @@
+{
+  "name": "webShop",
+  "homepage": "https://github.com/K-S-A/webShop",
+  "authors": [
+    "K-S-A <koniev.s.a@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
+    "jquery": "^2.2.1",
+    "jquery-ujs": "^1.2.0",
+    "angular-ui-router": "^0.2.18",
+    "angular-sanitize": "^1.5.7",
+    "angular-local-storage": "^0.2.7",
+    "fabric.js": "fabric#^1.6.3"
+  },
+  "resolutions": {
+    "angular": ">=1.2.26 <1.6"
+  }
+}
