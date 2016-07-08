@@ -6,8 +6,11 @@ angular.module('mainApp').directive 'myUpdateCanvas', [
   (Canvas, localStorageService) ->
     restrict: 'A'
     link: (scope, element, attrs, ctrl, transcludeFn) ->
-      element.on 'change', ->
+      target = 'vm.selectedObj.' + attrs.id.slice(9)
+
+      scope.$watch(target, (newValue, oldValue) ->
         localStorageService.set('canvas', Canvas.current)
         Canvas.current.renderAll()
+      )
 
 ]
