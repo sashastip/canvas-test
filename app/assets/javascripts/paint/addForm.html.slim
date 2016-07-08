@@ -1,0 +1,63 @@
+form.form-horizontal
+  .form-group
+    label.col-sm-4.control-label for="shape" Shape
+    .col-sm-8
+      select#shape.form-control data={ ng_model: "vm.obj",
+                                       ng_options: "k as v for (k, v) in vm.objects" }
+  .form-group data={ ng_show: "vm.obj === 'text'" }
+    label.col-sm-4.control-label for="text" Text
+    .col-sm-8
+      input#text.form-control { type="text"
+                                placeholder="Enter text here..."
+                                data={ ng_model: "vm.params.text" } }
+  .form-group data={ ng_show: "vm.obj === 'circle'" }
+    label.col-sm-4.control-label for="radius" Radius
+    .col-sm-8
+      input#radius.form-control type="number" data={ ng_model: "vm.params.radius" }
+  .form-group data={ ng_show: "vm.obj === 'rect'" }
+    label.col-sm-4.control-label for="width" Width
+    .col-sm-8
+      input#width.form-control type="number" data={ ng_model: "vm.params.width" }
+  .form-group data={ ng_show: "vm.obj === 'rect'" }
+    label.col-sm-4.control-label for="height" Height
+    .col-sm-8
+      input#height.form-control type="number" data={ ng_model: "vm.params.height" }
+  .form-group
+    label.col-sm-4.control-label for="top" Top
+    .col-sm-8
+      input#top.form-control type="number" data={ ng_model: "vm.params.top" }
+  .form-group
+    label.col-sm-4.control-label for="left" Left
+    .col-sm-8
+      input#left.form-control type="number" data={ ng_model: "vm.params.left" }
+  .form-group
+    label.col-sm-4.control-label for="fill" Fill
+    .col-sm-8
+      .col-sm-4
+        input#apply-fill.form-control { type="checkbox"
+                                        data={ ng_model: "vm.params.applyFill" } }
+      .col-sm-8
+        input#fill.form-control { type="color"
+                                  data={ ng_model: "vm.params.fill" } }
+  .form-group
+    label.col-sm-4.control-label for="opacity" Opacity
+    .col-sm-8
+      input#opacity.form-control { type="range"
+                                   min="0"
+                                   max="1"
+                                   step="0.01"
+                                   data={ ng_model: "vm.params.opacity" } }
+  .form-group
+    label.col-sm-4.control-label for="stroke" Stroke
+    .col-sm-8
+      input#stroke.form-control { type="color"
+                                  data={ ng_model: "vm.params.stroke" } }
+  .form-group
+    label.col-sm-4.control-label for="strokew" StrWdth
+    .col-sm-8
+      input#strokew.form-control { type="number"
+                                   min="0.1"
+                                   step="0.1"
+                                   data={ ng_model: "vm.params.strokeWidth" } }
+  .form-group
+    button.btn.btn-success.btn-block data={ ng_click: "vm.add()" } Add
