@@ -40,6 +40,18 @@ form.form-horizontal data={ ng_show: "vm.selectedObj.type" }
       input#selected-left.form-control { type="number"
                                          data={ ng_model: "vm.selectedObj.left",
                                                 my_update_canvas: "" } }
+
+  / .form-group
+  /   label.col-sm-4.control-label for="fill" Fill
+  /   .col-sm-8
+  /     .col-sm-4
+  /       input#apply-fill.form-control { type="checkbox"
+  /                                       data={ ng_model: "vm.params.applyFill" } }
+  /     .col-sm-8
+  /       input#fill.form-control { type="color"
+  /                                 data={ ng_model: "vm.params.fill" } }
+
+
   .form-group
     label.col-sm-4.control-label for="fill" Fill
     .col-sm-8
@@ -85,3 +97,4 @@ form.form-horizontal data={ ng_show: "vm.selectedObj.type" }
                                                   my_update_canvas: "" } }
 button.btn.btn-danger.btn-block data={ my_remove_selected: '',
                                        ng_show: "vm.selectedObj || vm.selectedGroup" } Remove
+button.btn.btn-warning.btn-block data={ my_clear_canvas: '' } Reset page

@@ -29,11 +29,12 @@ angular.module('mainApp').factory 'Canvas', [
 
     o.add = (obj) ->
       params = o.getParams(obj)
+      shape = if obj is 'text'
+                new fabric.Text(o.params.text, params)
+              else
+                new fabric[o.capitalize(obj)](params)
 
-      if obj is 'text'
-        o.current.add(new fabric.Text(o.params.text, params))
-      else
-        o.current.add(new fabric[o.capitalize(obj)](params))
+      o.current.add(shape)
 
     o.getParams = (obj) ->
       params =
