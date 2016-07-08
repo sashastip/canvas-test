@@ -17,10 +17,6 @@ angular.module('mainApp').controller('PaintCtrl', [
     vm.add = ->
       Canvas.add(vm.obj)
 
-    vm.updateSelected = ->
-      localStorageService.set('canvas', vm.canvas)
-      vm.canvas.renderAll()
-
     vm.selectionType = ->
       if vm.selectedObj
         vm.objects[vm.selectedObj.type]
